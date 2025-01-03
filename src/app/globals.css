@@ -19,19 +19,19 @@
 .dark::view-transition-new(root) {
   animation-name: reveal-dark;
 }
-@keyframes reveal-dark {
-  from {
-    clip-path: polygon(50% -71%, -50% 71%, -50% 71%, 50% -71%);
-  }
-  to {
-    clip-path: polygon(50% -71%, -50% 71%, 50% 171%, 171% 50%);
-  }
-}
 @keyframes reveal-light {
   from {
-    clip-path: polygon(171% 50%, 50% 171%, 50% 171%, 171% 50%);
+    clip-path: polygon(50% -71%, 171% 71%, 171% 71%, 50% -71%);
   }
   to {
-    clip-path: polygon(171% 50%, 50% 171%, -50% 71%, 50% -71%);
+    clip-path: polygon(50% -71%, 171% 71%, 50% 171%, -50% 71%);
+  }
+}
+@keyframes reveal-dark {
+  from {
+    clip-path: polygon(-71% 50%, 50% 171%, 50% 171%, -71% 50%);
+  }
+  to {
+    clip-path: polygon(-71% 50%, 50% 171%, 171% 50%, 50% -71%);
   }
 }
